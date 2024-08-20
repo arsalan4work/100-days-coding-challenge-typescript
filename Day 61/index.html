@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script text="type/JavaScript">
+            // Arrow functions, the basics
+            let sum = () => a + b;
+      alert(sum(1,3)); // 4)
+
+      // Multiline arrow functions
+      let sum1 = (a, b) => {  // the curly brace opens a multiline function
+        let result = a + b;
+        return result; // if we use curly braces, then we need an explicit "return"
+      };
+
+      alert( sum1(1, 2) ); // 3
+
+      // JavaScript specials
+      // Code structure
+      alert('Hello')
+      alert('World')
+      alert('Hello'); alert('World');
+      function f() {
+        // no semicolon needed after function declaration
+      }
+
+      for(;;) {
+        // no semicolon needed after the loop
+      }
+
+      // Strict mode
+      // Variables
+      typeof null == "object" // error in the language
+      typeof function(){} == "function" // functions are treated specially
+
+      let userName = prompt("Your name?", "Alice");
+      let isTeaWanted = confirm("Do you want some tea?");
+
+      alert( "Visitor: " + userName ); // Alice
+      alert( "Tea wanted: " + isTeaWanted ); // true
+
+      // Operators
+      alert( '1' + 2 ); // '12', string
+      alert( 1 + '2' ); // '12', string
+
+      // Loops
+      // 1
+      // while (condition) {
+      //   ...
+      // }
+
+      // 2
+      do {
+      //   ...
+      } while (condition);
+
+      // 3
+      for(let i = 0; i < 10; i++) {
+      //   ...
+      }
+
+      // Switch
+      let age = prompt('Your age?', 18);
+
+      switch (age) {
+        case 18:
+          alert("Won't work"); // the result of prompt is a string, not a number
+          break;
+
+        case "18":
+          alert("This works!");
+          break;
+
+        default:
+          alert("Any value not equal to one above");
+      }
+
+      // Functions
+      function sum(a, b) {
+        let result = a + b;
+
+        return result;
+      }
+
+      // expression on the right side
+      let sum = (a, b) => a + b;
+
+      // or multi-line syntax with { ... }, need return here:
+      let sum = (a, b) => {
+        // ...
+        return a + b;
+      }
+
+      // without arguments
+      let sayHi = () => alert("Hello");
+
+      // with a single argument
+      let double = n => n * 2;
+    </script>
+  </body>
+</html>
